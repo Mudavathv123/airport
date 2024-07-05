@@ -1,0 +1,22 @@
+.header-container {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px 0px #0000000D;
+}
+
+.profile-img {
+    width: 32px;
+    height: 32px;
+    top: 14px;
+    left: 1848px;
+    gap: 0px;
+    border-radius: 16px;
+    opacity: 0px;
+}
+
+.header-logo {
+    width: 136px;
+    height: 20px;
+}

@@ -1,0 +1,12 @@
+
+.all-airports-section {
+    min-width : 1001px;
+}
+
+th {
+font-family: "Source Sans Pro", Arial, sans-serif;
+font-size: 14px;
+font-weight: 600;
+line-height: 17.6px;
+text-align: left;
+}

@@ -1,0 +1,115 @@
+.table {
+   min-width: 1001px;
+    border: 1px solid #D5D5D5;
+    height: 272px;
+}
+
+
+.all-airports-data {
+    min-width: 1001px;
+    border: 1px solid #D5D5D5;
+    text-align: left;
+}
+
+.all {
+    display: flex;
+    flex-direction: row;
+}
+
+.checkbox-head {
+    width: 48px;
+    height: 32px;
+    padding: 0px 16px 0px 16px;
+    gap: 0px;
+    border: 0px 0px 1px 0px;
+    opacity: 0px;
+}
+
+.airports-data {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.6px;
+    text-align: left;
+}
+
+.county-data {
+    width: 161px;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.6px;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #222222;
+}
+
+.code-data {
+    width: 95px;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.6px;
+    text-align: right;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #222222;
+}
+
+.terminals-data {
+    width: 95px;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.6px;
+    text-align: right;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #222222;
+}
+
+.icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 40px;
+    gap: 8px;
+    border-radius: 4px 0px 0px 0px;
+   margin-top: 26px;
+}
+
+.edit-icon {
+    width: 18px;
+    height: 18px;
+    padding: 1.04px 1.04px 1.02px 1.02px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.delete-icon {
+    width: 15px;
+    height: 16px;
+    top: 1px;
+    left: 1px;
+    gap: 0px;
+    opacity: 0px;
+}
+
+.airport-table-container {
+   
+    display: flex;
+    flex-direction: row;
+    gap:8px;
+    margin-top:50px;
+    
+}
+.edit-btn {
+    background-color: transparent;
+    border: none;  
+}
+.delete-btn {
+    background-color: transparent;
+    border: none;  
+}

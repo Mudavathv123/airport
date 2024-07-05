@@ -1,0 +1,277 @@
+.specific-airport-container {
+    box-sizing: border-box;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 50vw;
+}
+
+.service-line {
+    max-width: 1400px;
+    min-width: 70vw;
+    border-radius: 10px 0px 0px 0px;
+    background: #D5D5D5;
+
+}
+
+.specific-airport-tabs {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    max-width: 1400px;
+    height: 48px;
+    padding: 0px 48px 0px 0px;
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+.tab {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.6px;
+    text-align: left;
+
+}
+
+.terminals-container {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.add-terminal-btn {
+    width: 121px;
+    height: 32px;
+    border-radius: 16px;
+    border: 2px solid #222222;
+    background-color: transparent;
+    color: #222222;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.6px;
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    width: 176px;
+    height: 57px;
+    gap: 6px;
+}
+
+.input {
+    width: 176px;
+    height: 33px;
+    padding: 7px 7px 8px 12px;
+    gap: 8px;
+    border-radius: 4px;
+    border: 1px solid #B1B1B1;
+    outline: none;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.label {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.08px;
+    text-align: left;
+}
+
+.form-container {
+    width: 927px;
+    height: 134px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.type-decription {
+    width: 392px;
+    height: 33px;
+}
+
+.descriptin-input {
+    width: 392px;
+    height: 33px;
+    padding: 7px 7px 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #B1B1B1;
+    outline: none;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+
+
+}
+
+.upload-btn {
+    width: 137px;
+    height: 32px;
+    padding: 6px 15px 7px 14px;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: #E6E6E6;
+    gap: 4px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    width: 140px;
+    height: 32px;
+    padding: 7px 0px 7px 0px;
+    gap: 20px;
+}
+
+.text {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    color: #222222;
+    width: 1400px;
+}
+
+.line {
+    width: 400px;
+    background: #D5D5D5;
+
+}
+
+/* switch-styles.css */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 16px;
+    background-color: #D5D5D5;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.switch input {
+    display: none;
+}
+
+.switch .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #D5D5D5;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.switch input:checked+.slider {
+    background-color: green;
+    transform: translateX(16px);
+}
+
+.upload-image-container {
+    box-sizing: border-box;
+    max-width: 464px;
+    height: 212px;
+    border-radius: 4px;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.cancel-btn {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.6px;
+    text-align: center;
+    width: 75px;
+    height: 32px;
+    padding: 6px 17px 7px 17px;
+    border-radius: 16px;
+    border: 2px solid #D5D5D5;
+    background-color: transparent;
+}
+
+.continue-btn {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 17.6px;
+    text-align: center;
+    width: 90px;
+    height: 32px;
+    padding: 6px 17px 7px 17px;
+    border-radius: 16px;
+    border: 2px solid #222222;
+    color: #222222;
+    background-color: transparent;
+}
+
+.popup-head {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22.63px;
+    text-align: left;
+    color: #000000;
+    width: 400px;
+    height: 36px;
+    gap: 11px;
+}
+
+.popup-description {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.6px;
+    text-align: left;
+
+}
+
+.line {
+    width: 400px;
+    height: 2px;
+    color: transparent;
+    background: #D5D5D5;
+
+}
+
+.popup-btn-container {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cancel-or-continue-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.popup-head-container {
+    width: 400px;
+    height: 70px;
+    gap: 16px;
+
+}

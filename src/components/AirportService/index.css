@@ -1,0 +1,9 @@
+
+.airport-service-container {
+    max-width: 100vw;
+}
+
+.body-container {
+    display: flex;
+    gap:30px;
+}
