@@ -1,194 +1,353 @@
-
 :root {
     --left-bg-color: rgba(87, 84, 236, 0.7);
     --right-bg-color: rgba(43, 43, 43, 0.8);
     --left-btn-hover-color: rgba(87, 84, 236, 1);
     --right-btn-hover-color: rgba(28, 122, 28, 1);
-    --btn-hover-coolor: linear-gradient(to left,#D20062,#D6589F,#C7253E);
+    --btn-hover-coolor: linear-gradient(to left, #D20062, #D6589F, #C7253E);
     --hover-width: 50%;
     --other-width: 50%;
     --speed: 1000ms;
 }
 
-*{
+
+* {
     box-sizing: border-box;
 }
 
 body {
     height: 100vh;
+    width: 100vw;
     margin: 0;
     overflow: hidden;
 }
 
-.container {
-    width: 10,0%;
-    height: 100%;
-    position: relative;
-    background-image: url("lovebg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+@media (min-width:768px) {
+
+
+
+    .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-image: url("lovebg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .split-in-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        transition: transform .5s ease-in-out;
+    }
+
+    .split h1 {
+        color: #ffffff;
+        font-size: 28px;
+        font-family: 'Roboto', sans-serif;
+
+    }
+
+    .btn {
+        height: 40px;
+        width: 120px;
+        font-size: 16px;
+        color: #fff;
+        background-color: transparent;
+        outline: none;
+        border: 1px solid #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        transition: .5s ease-in-out;
+        border-radius: 8px;
+        transform: translateX(-50%);
+    }
+
+    .btn a {
+        text-decoration: none;
+        color: #fff;
+
+    }
+
+    .split {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+
+    .split.left {
+        left: 0;
+        background-image: url("leftlove.webp");
+
+    }
+
+    .split.left::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        /* background-color: var(--left-bg-color); */
+    }
+
+    .split.right {
+        right: 0;
+        background-image: url("rightlove.jpg");
+
+    }
+
+    .split.right::before {
+        content: '';
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-color: var(--right-bg-color);
+    }
+
+    .split.left .btn:hover {
+        background: var(--btn-hover-coolor);
+        border: var(--btn-hover-coolor);
+    }
+
+    .split.right .btn:hover {
+        background: var(--btn-hover-coolor);
+        border: var(--btn-hover-coolor);
+    }
+
+    .split.left,
+    .split.right,
+    .split.left::before,
+    .split.right::before {
+        transition: all var(--speed) ease-in-out;
+    }
+
+    .hover-left .left {
+        width: var(--hover-width);
+        transform: translateX(-50%);
+
+    }
+
+    .hover-left .left .split-in-container.in-left {
+        height: 100%;
+        width: 400px;
+        transform: translateX(100%);
+    }
+
+    .hover-left .right .split-in-container.in-right {
+        height: 100%;
+        width: 300px;
+        transform: translateX(10%);
+    }
+
+    .hover-right .left .split-in-container.in-left {
+        height: 100%;
+        width: 400px;
+        transform: translateX(100%);
+    }
+
+    .hover-right .right .split-in-container.in-right {
+        height: 100%;
+        width: 300px;
+        transform: translateX(10%);
+    }
+
+
+    .hover-left .right {
+        width: var(--other-width);
+        transform: translateX(50%);
+    }
+
+    .hover-right .right {
+        width: var(--hover-width);
+        transform: translateX(50%);
+    }
+
+    .hover-right .left {
+        width: var(--other-width);
+        transform: translateX(-50%);
+    }
+
+    .in-container h1 {
+        text-align: center;
+        color: #fff;
+    }
+
+    .in-container p {
+        color: #fff;
+    }
+
+    .in-container {
+        width: 250px;
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        bottom: 50%;
+        right: 50%;
+    }
 }
 
-.split-in-container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:10px;
-    transition: transform .5s ease-in-out;
-   
-}
 
-.split h1 {
-    color: #ffffff;
-    font-size: 28px;
-    font-family: 'Roboto', sans-serif;
-  
-}
+@media (max-width:768px) {
 
-.btn {
-    height:40px;
-    width:120px;
-    font-size: 16px;
-    color: #fff;
-    background-color: transparent;
-    outline: none;
-    border: 1px solid #fff;
-    text-transform: uppercase;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    transition: .5s ease-in-out;
-    border-radius: 8px;
-    transform: translateX(-50%);
-}
+    .split h1 {
+        color: #ffffff;
+        font-size: 28px;
+        font-family: 'Roboto', sans-serif;
 
-.btn a {
-    text-decoration: none;
-    color: #fff;
+    }
 
-}
+    .btn {
+        height: 40px;
+        width: 120px;
+        font-size: 16px;
+        color: #fff;
+        background-color: transparent;
+        outline: none;
+        border: 1px solid #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        transition: .5s ease-in-out;
+        border-radius: 8px;
+        transform: translateX(-50%);
+    }
 
-.split {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-   
-}
+    .btn a {
+        text-decoration: none;
+        color: #fff;
 
-.split.left {
-    left: 0;
-    background-image: url("leftlove.webp");
-  
-}
+    }
 
-.split.left::before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    /* background-color: var(--left-bg-color); */
-}
+    .split h1 {
+        color: #ffffff;
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
 
-.split.right {
-    right: 0;
-    background-image: url("rightlove.jpg");
-   
-}
+    }
 
-.split.right::before {
-    content: '';
-    position: relative;
-    height: 100%;
-    width: 100%;
-    background-color: var(--right-bg-color);
-}
+    .split-in-container {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        transition: transform .5s ease-in-out;
+    }
 
- .split.left .btn:hover{
-    background: var(--btn-hover-coolor);
-    border: var(--btn-hover-coolor);
-}
-
-.split.right .btn:hover {
-    background: var(--btn-hover-coolor);
-    border: var(--btn-hover-coolor);
-}
-
-.split.left,
-.split.right,
-.split.left::before,
-.split.right::before {
-    transition: all var(--speed) ease-in-out;
-}
-
-.hover-left .left {
-    width: var(--hover-width);
-    transform: translateX(-50%);
-   
-}
-
-.hover-left .left .split-in-container.in-left {
-    height: 100%;
-    width: 400px;
-    transform: translateX(100%);
-}
-
-.hover-left .right .split-in-container.in-right {
-    height: 100%;
-    width: 300px;
-    transform: translateX(10%);
-}
-
-.hover-right .left .split-in-container.in-left {
-    height: 100%;
-    width: 400px;
-    transform: translateX(100%);
-}
-
-.hover-right .right .split-in-container.in-right {
-    height: 100%;
-    width: 300px;
-    transform: translateX(10%);
-}
+    .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-image: url("lovebg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
 
-.hover-left .right {
-    width: var(--other-width);
-    transform: translateX(50%);
-}
+    .split {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
-.hover-right .right {
-    width: var(--hover-width);
-    transform: translateX(50%);
-}
+    .split.left {
+        width: 100vw;
+        top: 0;
+        background-image: url("leftlove.webp");
+    }
 
-.hover-right .left {
-    width: var(--other-width);
-    transform: translateX(-50%);
-}
+    .split.right {
+        width: 100vw;
+        bottom: 0;
+        background-image: url("rightlove.jpg");
+    }
 
-.in-container h1 {
-    text-align:center;
-    color: #fff;
-}
 
-.in-container p {
-    color: #fff;
-}
+    .hover-left .left {
+        height: var(--hover-width);
+        transform: translateY(-50%);
 
-.in-container {
-    width: 250px;
-    position: absolute;
-    left: 50%;
-    top: 45%;
-    bottom: 50%;
-    right: 50%;
+    }
+
+    .hover-left .left .split-in-container.in-left {
+        height: 50%;
+        height: 400px;
+        transform: translateY(10%);
+    }
+
+    .hover-left .right .split-in-container.in-right {
+        height: 50%;
+        height: 300px;
+        transform: translateY(-10%);
+    }
+
+    .hover-right .left .split-in-container.in-left {
+        height: 100%;
+        width: 400px;
+        transform: translateY(10%);
+    }
+
+    .hover-right .right .split-in-container.in-right {
+        height: 100%;
+        width: 300px;
+        transform: translateY(-8%);
+    }
+
+
+    .hover-left .right {
+        height: var(--other-width);
+        transform: translateY(50%);
+    }
+
+    .hover-right .right {
+        height: var(--hover-width);
+        transform: translateY(50%);
+    }
+
+    .hover-right .left {
+        height: var(--other-width);
+        transform: translateY(-50%);
+    }
+
+    .in-container h1 {
+        font-size: 24px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .in-container p {
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .in-container {
+        height: 100vh;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        bottom: 50%;
+        right: 20%;
+    }
+
 }
