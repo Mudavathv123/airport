@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TON - The Open Network</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-cube me-2"></i>TON
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ecosystem">Ecosystem</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#developers">Developers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#community">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary ms-2" href="#wallet">Get Wallet</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <h1 class="display-2 fw-bold mb-4">
+                        The Open Network
+                        <span class="text-primary">for everyone</span>
+                    </h1>
+                    <p class="lead mb-4">
+                        A decentralized and open internet designed to onboard 500M people on-chain, 
+                        built by the community using technology developed by Telegram.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary btn-lg me-3">Explore Wallets</a>
+                        <a href="#" class="btn btn-outline-light btn-lg">Build on TON</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-animation">
+                        <div class="blockchain-visual">
+                            <div class="block block-1"></div>
+                            <div class="block block-2"></div>
+                            <div class="block block-3"></div>
+                            <div class="connections"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started Section -->
+    <section class="getting-started py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="h1 mb-4">Getting started is easy: all you need is <i class="fab fa-telegram text-primary"></i> Telegram</h2>
+                    <a href="#" class="btn btn-primary btn-lg">Get Wallet</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="feature-card h-100">
+                                <i class="fas fa-exchange-alt text-primary mb-3"></i>
+                                <p>Enjoy commission-free crypto transfers to any Telegram user</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-card h-100">
+                                <i class="fas fa-shield-alt text-primary mb-3"></i>
+                                <p>Retain full control of your Toncoin and other digital assets with TON Space</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-card h-100">
+                                <i class="fas fa-globe text-primary mb-3"></i>
+                                <p>Seamlessly interact with web3 apps</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="feature-card h-100">
+                                <i class="fas fa-wallet text-primary mb-3"></i>
+                                <p>Wallet gives direct and easy access to TON from Telegram</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toncoin Section -->
+    <section id="about" class="toncoin-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="h1 mb-4">Cryptocurrency is the heart of TON</h2>
+                    <p class="lead mb-5">
+                        Toncoin is TON's native cryptocurrency. It is used for network operations, 
+                        transactions, games or collectibles built on TON.
+                    </p>
+                    <a href="#" class="btn btn-primary btn-lg mb-5">Get Toncoin</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="crypto-stats bg-white rounded-3 p-4 shadow">
+                        <div class="row text-center">
+                            <div class="col-md-3">
+                                <h3 class="text-primary">Toncoin (TON)</h3>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="mb-1 text-muted">Rank</p>
+                                <h4>—</h4>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="mb-1 text-muted">Market Cap</p>
+                                <h4>—</h4>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="mb-1 text-muted">Volume</p>
+                                <h4>—</h4>
+                            </div>
+                        </div>
+                        <small class="text-muted">Powered by CoinMarketCap. Last updated less than a minute ago</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DeFi Section -->
+    <section class="defi-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 mb-4">Unlocking freedom with Decentralized Finance</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="defi-card h-100">
+                        <i class="fas fa-users text-primary mb-3"></i>
+                        <h5>Nominator pools</h5>
+                        <p>Use Toncoin for contribution to network security.</p>
+                        <a href="#" class="btn btn-outline-primary">Explore options</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="defi-card h-100">
+                        <i class="fas fa-exchange-alt text-primary mb-3"></i>
+                        <h5>Buy and trade</h5>
+                        <p>Swap currencies on decentralized exchanges.</p>
+                        <a href="#" class="btn btn-outline-primary">Swap currencies</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="defi-card h-100">
+                        <i class="fas fa-bridge-water text-primary mb-3"></i>
+                        <h5>Cross-Chain Bridges</h5>
+                        <p>Transfer your assets from other networks.</p>
+                        <a href="#" class="btn btn-outline-primary">Explore bridges</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="defi-card h-100">
+                        <i class="fas fa-credit-card text-primary mb-3"></i>
+                        <h5>Accept payments</h5>
+                        <p>Accept Toncoin worldwide, directly and at low fees.</p>
+                        <a href="#" class="btn btn-outline-primary">Accept payments</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="defi-card h-100">
+                        <i class="fas fa-coins text-primary mb-3"></i>
+                        <h5>Mint your token</h5>
+                        <p>Create your own cryptocurrency in few clicks.</p>
+                        <a href="#" class="btn btn-outline-primary">Learn more</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="defi-card h-100">
+                        <i class="fas fa-dollar-sign text-primary mb-3"></i>
+                        <h5>USDT on TON</h5>
+                        <p>Explore stablecoin usage.</p>
+                        <a href="#" class="btn btn-outline-primary">Learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ecosystem Section -->
+    <section id="ecosystem" class="ecosystem-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 mb-4">Explore apps and services</h2>
+                <a href="#" class="btn btn-primary">Explore all ecosystem</a>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="app-card">
+                        <div class="app-icon bg-primary"></div>
+                        <h6>Fast, Secure, Global</h6>
+                        <p>Internet eSIM for Home & Travel</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="app-card">
+                        <div class="app-icon bg-success"></div>
+                        <h6>Easy-to-remember address</h6>
+                        <p>Your wallet or website can be easily found in the TON network.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="app-card">
+                        <div class="app-icon bg-warning"></div>
+                        <h6>Monetize your audience</h6>
+                        <p>Earn from subscriptions and donations to your community.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="app-card">
+                        <div class="app-icon bg-info"></div>
+                        <h6>Buy Telegram Premium</h6>
+                        <p>Use your crypto wallet to pay for subscriptions for you & friends.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="app-card">
+                        <div class="app-icon bg-danger"></div>
+                        <h6>Find a match</h6>
+                        <p>Private dating community for the crypto generation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="app-card">
+                        <div class="app-icon bg-secondary"></div>
+                        <h6>Unique collectibles</h6>
+                        <p>Explore, buy and sell collectibles used in games and services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Internet Section -->
+    <section class="future-section py-5 bg-dark text-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 mb-4">Dive into the future of internet</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="future-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4>TON Sites, TON Proxy, TON WWW</h4>
+                            <span class="badge bg-primary">version 1.0</span>
+                        </div>
+                        <p>Try the decentralized, secure, reliable Internet of the future with TON services.</p>
+                        <a href="#" class="btn btn-outline-light">Read more</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="future-card">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4>TON Storage</h4>
+                            <span class="badge bg-primary">version 1.0</span>
+                        </div>
+                        <p>Keep your data safe and secure with the decentralized storage of the future.</p>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-outline-light">Read more</a>
+                            <a href="#" class="btn btn-outline-light">Roadmap</a>
+                            <a href="#" class="btn btn-outline-light">Dev docs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developers Section -->
+    <section id="developers" class="developers-section py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="h1 mb-4">Build your product for a global audience</h2>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="devOptions" id="miniApps" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="miniApps">Mini Apps</label>
+                    
+                    <input type="radio" class="btn-check" name="devOptions" id="gamefi" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="gamefi">GameFi</label>
+                    
+                    <input type="radio" class="btn-check" name="devOptions" id="defi" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="defi">DeFi</label>
+                </div>
+                <p class="mt-3">Check out the roadmap to discover upcoming opportunities.</p>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h3>Unlock access to millions of Telegram users</h3>
+                    <p class="lead">
+                        Your app can unlock access to millions of Telegram users with one-click app launch, 
+                        direct advertising, along with viral and retention mechanics based in the messenger.
+                    </p>
+                    <a href="#" class="btn btn-primary btn-lg">Build Mini App</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="video-placeholder bg-light rounded-3 d-flex align-items-center justify-content-center" style="height: 300px;">
+                        <i class="fas fa-play-circle fa-5x text-primary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="h1 mb-4">Developers center</h2>
+                <p class="lead mb-4">Quick start and deep dive into development on TON.</p>
+                <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Use</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Get a wallet</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Get or sell Toncoin</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Stake</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Accept Payments</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Learn</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">TON Concept</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Decentralized Network</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Roadmap</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">White paper</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>For Developers</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Getting started</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Documentation</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Dev Community</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Grants</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5>Community</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Communities</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">TON Foundation</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Events</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 TON - The Open Network. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-telegram fa-lg"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-discord fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
