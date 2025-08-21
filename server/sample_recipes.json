@@ -1,0 +1,66 @@
+[
+  {
+    "cuisine": "Italian",
+    "title": "Classic Margherita Pizza",
+    "rating": 4.6,
+    "prep_time": 20,
+    "cook_time": 15,
+    "total_time": 35,
+    "description": "A simple pizza with tomatoes, mozzarella, and basil.",
+    "nutrients": {
+      "calories": 300,
+      "carbohydrateContent": 35,
+      "cholesterolContent": 20,
+      "fiberContent": 2,
+      "proteinContent": 12,
+      "saturatedFatContent": 5,
+      "sodiumContent": 600,
+      "sugarContent": 4,
+      "fatContent": 10
+    },
+    "serves": "2"
+  },
+  {
+    "cuisine": "Mexican",
+    "title": "Chicken Tacos",
+    "rating": 4.8,
+    "prep_time": 15,
+    "cook_time": 10,
+    "total_time": 25,
+    "description": "Juicy chicken tacos with fresh salsa.",
+    "nutrients": {
+      "calories": 250,
+      "carbohydrateContent": 20,
+      "cholesterolContent": 40,
+      "fiberContent": 3,
+      "proteinContent": 18,
+      "saturatedFatContent": 3,
+      "sodiumContent": 500,
+      "sugarContent": 3,
+      "fatContent": 9
+    },
+    "serves": "3"
+  },
+  {
+    "cuisine": "Indian",
+    "title": "Chana Masala",
+    "rating": 4.4,
+    "prep_time": 10,
+    "cook_time": 30,
+    "total_time": 40,
+    "description": "Spiced chickpea curry.",
+    "nutrients": {
+      "calories": 220,
+      "carbohydrateContent": 30,
+      "cholesterolContent": 0,
+      "fiberContent": 6,
+      "proteinContent": 10,
+      "saturatedFatContent": 1,
+      "sodiumContent": 450,
+      "sugarContent": 5,
+      "fatContent": 6
+    },
+    "serves": "4"
+  }
+]
+

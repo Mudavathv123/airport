@@ -1,0 +1,14 @@
+[
+  {
+    "cuisine": "Italian",
+    "title": "Classic Margherita Pizza",
+    "rating": 4.6,
+    "prep_time": 20,
+    "cook_time": 15,
+    "total_time": 35,
+    "description": "A simple pizza with tomatoes, mozzarella, and basil.",
+    "nutrients": {"calories": 300},
+    "serves": "2"
+  }
+]
+

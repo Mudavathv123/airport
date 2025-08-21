@@ -1,70 +1,128 @@
-# Getting Started with Create React App
+# Recipe Data Collection and API Development
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Full-stack implementation using React (CRA), Express, and SQLite (via Knex).
 
-## Available Scripts
+## Project Structure
 
-In the project directory, you can run:
+- `server/` Express API, database, and seed scripts
+- `src/` React frontend (table, filters, drawer)
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Frontend: React, MUI, Tailwind (CDN), axios, react-rating-stars-component
+- Backend: Node.js, Express, Knex, SQLite
+- Database: SQLite (dev-friendly). Schema compatible with PostgreSQL
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Database Schema
 
-### `npm test`
+Table `recipes`:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+id INTEGER PRIMARY KEY AUTOINCREMENT
+cuisine VARCHAR(100)
+title VARCHAR(255)
+rating FLOAT
+prep_time INTEGER
+cook_time INTEGER
+total_time INTEGER
+description TEXT
+nutrients TEXT (JSON string)
+serves VARCHAR(50)
+```
 
-### `npm run build`
+## Setup (Node/Express backend)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1) Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2) Seed database with your JSON file (place `US_recipes.json` in project root):
 
-### `npm run eject`
+```
+npm run seed
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Or seed with sample data:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm run seed:sample
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3) Start app (client + server):
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm start
+```
 
-## Learn More
+- Client: http://localhost:3000
+- API: http://localhost:4000
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Setup (Spring Boot + HSQLDB backend)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1) Build and run Spring Boot API:
 
-### Code Splitting
+```
+cd springboot-backend
+mvn spring-boot:run
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- API: http://localhost:8080
+- Optional: provide your JSON path: `mvn spring-boot:run -Dspring-boot.run.arguments="--data=/absolute/path/US_recipes.json"`
 
-### Analyzing the Bundle Size
+2) Start React client in another terminal (proxy points to 8080):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+npm run start:client
+```
 
-### Making a Progressive Web App
+## API Endpoints
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- GET `/api/recipes?page=1&limit=10` — paginated, sorted by rating desc
 
-### Advanced Configuration
+Sample response:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+{ "page": 1, "limit": 10, "total": 8450, "data": [ { ... } ] }
+```
 
-### Deployment
+- GET `/api/recipes/search?calories=<=400&title=pie&rating=>=4.5&cuisine=Italian&total_time=<=120`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Sample response:
 
-### `npm run build` fails to minify
+```
+{ "data": [ { ... } ] }
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Notes:
+
+- Comparators supported for numeric filters: `<=`, `>=`, `=`, `<`, `>`
+- Calories is read from `nutrients.calories` (JSON)
+
+## Frontend
+
+- Navigate to `/recipes` to open the Recipe table.
+- Features:
+  - Table columns: Title, Cuisine, Rating (stars), Total Time, Serves
+  - Filters: title, cuisine, rating, total time, calories
+  - Drawer with details and nutrients
+  - Pagination and per-page selection
+  - Empty-state messages when no data
+
+## Testing with curl
+
+```
+# With Express
+curl "http://localhost:4000/api/recipes?page=1&limit=10"
+curl "http://localhost:4000/api/recipes/search?calories=<=400&title=pie&rating=>=4.5"
+
+# With Spring Boot
+curl "http://localhost:8080/api/recipes?page=1&limit=10"
+curl "http://localhost:8080/api/recipes/search?calories=<=400&title=pie&rating=>=4.5"
+```
+
+## Implementation Notes
+
+- NaN numeric fields are normalized to NULL during seeding
+- `nutrients` stored as JSON string; SQL-side filter uses SQLite JSON1 `json_extract`

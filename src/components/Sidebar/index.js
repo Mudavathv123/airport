@@ -22,6 +22,9 @@ const Sidebar = () => (
             <Link to="/airport-services" className="link">
                 <li className="active-tab">Airports</li>
             </Link>
+            <Link to="/recipes" className="link">
+                <li className="label-name">Recipes</li>
+            </Link>
             <li className="label-name">Videos</li>
         </ul>
         <ul className="sidebar-item-container">

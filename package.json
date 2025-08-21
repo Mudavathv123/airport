@@ -6,20 +6,32 @@
     "@adobe/react-spectrum": "^3.35.1",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^7.3.1",
+    "@mui/material": "^7.3.1",
     "@react-spectrum/switch": "^3.5.5",
     "@react-spectrum/table": "3.12",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.11.0",
+    "concurrently": "^9.2.0",
+    "express": "^5.1.0",
+    "knex": "^3.1.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-rating-stars-component": "^2.2.0",
     "react-router-dom": "^6.24.1",
     "react-scripts": "5.0.1",
     "reactjs-popup": "^2.0.6",
+    "sqlite3": "^5.1.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"npm run start:client\" \"npm run start:server\"",
+    "start:client": "react-scripts start",
+    "start:server": "node server/server.js",
+    "seed": "node server/seed.js US_recipes.json",
+    "seed:sample": "node server/seed.js server/sample_recipes.json",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -42,4 +54,6 @@
       "last 1 safari version"
     ]
   }
+  ,
+  "proxy": "http://localhost:8080"
 }
