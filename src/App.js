@@ -2,6 +2,7 @@
 import { Routes, Route} from 'react-router-dom';
 import AirportService from './components/AirportService';
 import HomePage from './components/HomePage';
+import { RecipeTable } from './components/Recipes';
 import './App.css';
 
 
@@ -11,6 +12,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage />} />
                 <Route path="/airport-services" element={<AirportService />} />
+                <Route path="/recipes" element={<RecipeTable />} />
             </Routes>
       </>
    )
