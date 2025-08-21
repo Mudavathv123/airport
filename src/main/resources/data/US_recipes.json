@@ -1,0 +1,44 @@
+[
+  {
+    "cuisine": "American",
+    "title": "Classic Apple Pie",
+    "rating": 4.6,
+    "prep_time": 30,
+    "cook_time": 60,
+    "total_time": 90,
+    "description": "A flaky crust with tender apples and warm spices.",
+    "nutrients": {
+      "calories": 320,
+      "carbohydrateContent": 45,
+      "cholesterolContent": 30,
+      "fiberContent": 4,
+      "proteinContent": 3,
+      "saturatedFatContent": 5,
+      "sodiumContent": 180,
+      "sugarContent": 24,
+      "fatContent": 12
+    },
+    "serves": "8"
+  },
+  {
+    "cuisine": "Italian",
+    "title": "Spaghetti Carbonara",
+    "rating": 4.8,
+    "prep_time": 15,
+    "cook_time": 20,
+    "total_time": 35,
+    "description": "Creamy pasta with pancetta, egg, and parmesan.",
+    "nutrients": {
+      "calories": 550,
+      "carbohydrateContent": 60,
+      "cholesterolContent": 200,
+      "fiberContent": 3,
+      "proteinContent": 22,
+      "saturatedFatContent": 12,
+      "sodiumContent": 700,
+      "sugarContent": 3,
+      "fatContent": 28
+    },
+    "serves": "4"
+  }
+]

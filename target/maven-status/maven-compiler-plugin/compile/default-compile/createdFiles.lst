@@ -1,0 +1,11 @@
+com/example/recipes/bootstrap/JsonDataLoader.class
+com/example/recipes/web/RecipeController.class
+com/example/recipes/RecipesApplication.class
+com/example/recipes/repository/RecipeRepository.class
+com/example/recipes/domain/Recipe.class
+com/example/recipes/config/JacksonConfig.class
+com/example/recipes/domain/Recipe$1.class
+com/example/recipes/service/impl/RecipeServiceImpl.class
+com/example/recipes/service/RecipeService.class
+com/example/recipes/domain/Recipe$RecipeBuilder.class
+com/example/recipes/web/RestExceptionHandler.class

@@ -1,3 +1,69 @@
+## Recipes Backend (Spring Boot + MySQL)
+
+This project parses a JSON file of recipes, stores it in MySQL, and exposes REST APIs for listing and searching. Includes OpenAPI UI.
+
+### Requirements
+- Java 17+
+- Maven 3.9+
+- MySQL 8+
+
+### Setup
+1. Create database:
+```sql
+CREATE DATABASE recipes_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+```
+2. Configure credentials via environment variables or edit `src/main/resources/application.yml`:
+```
+DB_USERNAME=your_user
+DB_PASSWORD=your_pass
+```
+3. Build and run:
+```bash
+mvn spring-boot:run
+```
+
+Flyway runs migration `V1__init_schema.sql` to create the `recipes` table.
+
+### Import sample data
+Set in `application.yml`:
+```
+app:
+  data:
+    init: true
+```
+Default file: `classpath:data/US_recipes.json`. On first run with empty table, it imports.
+
+### API
+- Swagger UI: `/swagger-ui/index.html`
+
+1) GET `/api/recipes?page=1&limit=10`
+Response:
+```json
+{ "page": 1, "limit": 10, "total": 2, "data": [ {"id":1, "title":"Classic Apple Pie", ...} ] }
+```
+
+2) GET `/api/recipes/search?calories=<=400&title=pie&rating=>=4.5`
+Response:
+```json
+{ "data": [ {"id":1, "title":"Classic Apple Pie", ...} ] }
+```
+
+Supported search filters:
+- calories: operators `<=`, `>=`, `<`, `>`, `=` or plain number
+- title: partial match
+- cuisine: exact match (case-insensitive)
+- total_time: numeric with operators
+- rating: numeric with operators
+
+### Notes
+- Numeric `NaN` values in JSON are converted to `null` during import.
+- `nutrients` stored as JSON string and returned as-is.
+
+### Run tests
+```bash
+mvn -q -DskipTests=false test
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

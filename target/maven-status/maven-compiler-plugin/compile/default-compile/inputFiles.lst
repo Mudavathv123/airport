@@ -1,0 +1,9 @@
+/workspace/src/main/java/com/example/recipes/bootstrap/JsonDataLoader.java
+/workspace/src/main/java/com/example/recipes/web/RestExceptionHandler.java
+/workspace/src/main/java/com/example/recipes/RecipesApplication.java
+/workspace/src/main/java/com/example/recipes/service/RecipeService.java
+/workspace/src/main/java/com/example/recipes/repository/RecipeRepository.java
+/workspace/src/main/java/com/example/recipes/config/JacksonConfig.java
+/workspace/src/main/java/com/example/recipes/web/RecipeController.java
+/workspace/src/main/java/com/example/recipes/domain/Recipe.java
+/workspace/src/main/java/com/example/recipes/service/impl/RecipeServiceImpl.java
