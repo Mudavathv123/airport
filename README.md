@@ -30,7 +30,7 @@ nutrients TEXT (JSON string)
 serves VARCHAR(50)
 ```
 
-## Setup
+## Setup (Node/Express backend)
 
 1) Install dependencies:
 
@@ -58,6 +58,24 @@ npm start
 
 - Client: http://localhost:3000
 - API: http://localhost:4000
+
+## Setup (Spring Boot + HSQLDB backend)
+
+1) Build and run Spring Boot API:
+
+```
+cd springboot-backend
+mvn spring-boot:run
+```
+
+- API: http://localhost:8080
+- Optional: provide your JSON path: `mvn spring-boot:run -Dspring-boot.run.arguments="--data=/absolute/path/US_recipes.json"`
+
+2) Start React client in another terminal (proxy points to 8080):
+
+```
+npm run start:client
+```
 
 ## API Endpoints
 
@@ -95,8 +113,13 @@ Notes:
 ## Testing with curl
 
 ```
+# With Express
 curl "http://localhost:4000/api/recipes?page=1&limit=10"
 curl "http://localhost:4000/api/recipes/search?calories=<=400&title=pie&rating=>=4.5"
+
+# With Spring Boot
+curl "http://localhost:8080/api/recipes?page=1&limit=10"
+curl "http://localhost:8080/api/recipes/search?calories=<=400&title=pie&rating=>=4.5"
 ```
 
 ## Implementation Notes
